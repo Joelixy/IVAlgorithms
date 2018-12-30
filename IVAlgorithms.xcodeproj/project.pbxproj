@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02185C721D89D5A0096E20C /* IVSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02185C521D89D5A0096E20C /* IVSort.cpp */; };
+		B02185CA21D8BE900096E20C /* IVMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02185C821D8BE900096E20C /* IVMath.cpp */; };
 		B03F396D21D7CE5100B069A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F396C21D7CE5100B069A7 /* AppDelegate.m */; };
-		B03F397021D7CE5100B069A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F396F21D7CE5100B069A7 /* ViewController.m */; };
+		B03F397021D7CE5100B069A7 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B03F396F21D7CE5100B069A7 /* ViewController.mm */; };
 		B03F397321D7CE5100B069A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F397121D7CE5100B069A7 /* Main.storyboard */; };
 		B03F397521D7CE5200B069A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03F397421D7CE5200B069A7 /* Assets.xcassets */; };
 		B03F397821D7CE5200B069A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F397621D7CE5200B069A7 /* LaunchScreen.storyboard */; };
@@ -16,11 +18,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B02185C521D89D5A0096E20C /* IVSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVSort.cpp; sourceTree = "<group>"; };
+		B02185C621D89D5A0096E20C /* IVSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVSort.hpp; sourceTree = "<group>"; };
+		B02185C821D8BE900096E20C /* IVMath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVMath.cpp; sourceTree = "<group>"; };
+		B02185C921D8BE900096E20C /* IVMath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVMath.hpp; sourceTree = "<group>"; };
 		B03F396821D7CE5100B069A7 /* IVAlgorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IVAlgorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03F396B21D7CE5100B069A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B03F396C21D7CE5100B069A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B03F396E21D7CE5100B069A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B03F396F21D7CE5100B069A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B03F396F21D7CE5100B069A7 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B03F397221D7CE5100B069A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B03F397421D7CE5200B069A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B03F397721D7CE5200B069A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +45,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02185BF21D89CA00096E20C /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				B02185C521D89D5A0096E20C /* IVSort.cpp */,
+				B02185C621D89D5A0096E20C /* IVSort.hpp */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		B02185C021D89CB30096E20C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		B02185C121D89CC20096E20C /* String */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		B02185C221D89CCA0096E20C /* LinkList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LinkList;
+			sourceTree = "<group>";
+		};
+		B02185C321D89CDC0096E20C /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		B02185C421D89D2E0096E20C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B02185C821D8BE900096E20C /* IVMath.cpp */,
+				B02185C921D8BE900096E20C /* IVMath.hpp */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		B03F395F21D7CE5100B069A7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +110,16 @@
 		B03F396A21D7CE5100B069A7 /* IVAlgorithms */ = {
 			isa = PBXGroup;
 			children = (
+				B02185C421D89D2E0096E20C /* Other */,
+				B02185C321D89CDC0096E20C /* Tree */,
+				B02185C221D89CCA0096E20C /* LinkList */,
+				B02185C121D89CC20096E20C /* String */,
+				B02185C021D89CB30096E20C /* Array */,
+				B02185BF21D89CA00096E20C /* Sort */,
 				B03F396B21D7CE5100B069A7 /* AppDelegate.h */,
 				B03F396C21D7CE5100B069A7 /* AppDelegate.m */,
 				B03F396E21D7CE5100B069A7 /* ViewController.h */,
-				B03F396F21D7CE5100B069A7 /* ViewController.m */,
+				B03F396F21D7CE5100B069A7 /* ViewController.mm */,
 				B03F397121D7CE5100B069A7 /* Main.storyboard */,
 				B03F397421D7CE5200B069A7 /* Assets.xcassets */,
 				B03F397621D7CE5200B069A7 /* LaunchScreen.storyboard */,
@@ -141,8 +199,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03F397021D7CE5100B069A7 /* ViewController.m in Sources */,
+				B03F397021D7CE5100B069A7 /* ViewController.mm in Sources */,
 				B03F397B21D7CE5200B069A7 /* main.m in Sources */,
+				B02185CA21D8BE900096E20C /* IVMath.cpp in Sources */,
+				B02185C721D89D5A0096E20C /* IVSort.cpp in Sources */,
 				B03F396D21D7CE5100B069A7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
