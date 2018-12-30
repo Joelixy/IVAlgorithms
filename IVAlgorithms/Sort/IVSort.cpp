@@ -2,7 +2,7 @@
 //  IVSort.cpp
 //  IVAlgorithms
 //
-//  Created by 李向阳 on 2018/12/30.
+//  Created by Joelixy on 2018/12/30.
 //  Copyright © 2018 JoeLixy. All rights reserved.
 //
 
