@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "IVSort.hpp"
+#import "IVMath.hpp"
+#import "IVString.hpp"
 
 @interface ViewController ()
 
@@ -19,6 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self interview_sort];
+    [self interview_math];
+    
+    [self interview_string];
 }
 
 - (void)interview_sort {
@@ -30,6 +35,27 @@
     sort.selectSort(a, 7);
     sort.insertSort(a, 7);
     sort.quickSort(a, 7);
+    
+}
+
+- (void)interview_math {
+    IVMath math;
+    long sum = math.fibonacciSequence(5);
+    int primeCount = math.countOfPrime(10);
+    int a[] = {6, 4, 3, 1, 2, 0, 5};
+    bool isExist = math.binarySearch(a, 7, 1);
+    bool isUgly = math.isUgly(7);
+    bool isPower = math.isPower(8);
+}
+
+- (void)interview_string {
+    IVString string;
+    char str[15] = "www/google/com";
+    string.reverseString(str);
+    
+    char replaceStr[15] = "www.google.com";
+    char withStr[6] = "/////";
+    string.replaceString(replaceStr, '.', withStr);
 }
 
 @end

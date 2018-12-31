@@ -15,6 +15,7 @@
 
  // 斐波那契数列
 long long IVMath::fibonacciSequence(unsigned n) {
+    
     int result[] = {0, 1};
     if (n < 2) {
         return result[n];
@@ -23,7 +24,7 @@ long long IVMath::fibonacciSequence(unsigned n) {
     long long secondValue = 1;
     long long sum = 0;
     for (int i = 2; i < n; i++) { // n以内的自然数
-        sum = firstValue + secondValue;
+        sum += firstValue + secondValue;
         firstValue = secondValue;
         secondValue = sum;
     }
@@ -42,11 +43,18 @@ bool isPrime(unsigned n) {
 // n以内的质数
 int IVMath::countOfPrime(unsigned n) {
     int count = 0;
+    int *a = new int[n];
     for (int i = 2; i < n; i++) {
         if (isPrime(i)) {
+            a[count] = i;
             count++;
         }
     }
+    printf("\n");
+    for (int i = count; i >= 0; i--) {
+        printf("%d, ", a[i]);
+    }
+    
     return count;
 }
 
