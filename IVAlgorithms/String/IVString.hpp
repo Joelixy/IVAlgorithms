@@ -18,6 +18,9 @@ public:
     
     // before:www.googl.com, after:www%20google%20com, withStr is %20
     static void replaceString(char *str, char targetStr, char *withStr);
+    
+    // 字符串转数字（整形）
+    static int convertStringToNumber(char *str);
 };
 
 #endif /* IVString_hpp */

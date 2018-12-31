@@ -94,3 +94,26 @@ void IVString::replaceString(char *str, char targetStr, char *withStr) {
     }
 }
 
+
+int IVString::convertStringToNumber(char *str) {
+    if (str == nullptr) {
+        return 0;
+    }
+    int sign = 1;
+    int number = 0;
+    while (*str == ' ') {
+        str++;
+    }
+    if (*str == '+' || *str == '-') {
+        if (*str == '-') {
+            sign = -1;
+        }
+        str++;
+    }
+    while (*str >= '0' && *str <= '9') {
+        int value = *str - '0';
+        number = number * 10 + value;
+        str++;
+    }
+    return number;
+}

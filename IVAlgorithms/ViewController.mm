@@ -56,6 +56,10 @@
     char replaceStr[15] = "www.google.com";
     char withStr[6] = "/////";
     string.replaceString(replaceStr, '.', withStr);
+    
+    char numStr[6] = " -352";
+    int number = string.convertStringToNumber(numStr);
+    NSLog(@"number:%d", number);
 }
 
 @end
