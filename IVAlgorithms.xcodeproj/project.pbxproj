@@ -15,6 +15,7 @@
 		B03F397521D7CE5200B069A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03F397421D7CE5200B069A7 /* Assets.xcassets */; };
 		B03F397821D7CE5200B069A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F397621D7CE5200B069A7 /* LaunchScreen.storyboard */; };
 		B03F397B21D7CE5200B069A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F397A21D7CE5200B069A7 /* main.m */; };
+		B05AA29721DA629300CE5F02 /* IVLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B05AA29521DA629300CE5F02 /* IVLinkList.cpp */; };
 		B0A9603921DA1C8F00F557C3 /* IVString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0A9603721DA1C8F00F557C3 /* IVString.cpp */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		B03F397721D7CE5200B069A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B03F397921D7CE5200B069A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03F397A21D7CE5200B069A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B05AA29521DA629300CE5F02 /* IVLinkList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVLinkList.cpp; sourceTree = "<group>"; };
+		B05AA29621DA629300CE5F02 /* IVLinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVLinkList.hpp; sourceTree = "<group>"; };
 		B0A9603721DA1C8F00F557C3 /* IVString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVString.cpp; sourceTree = "<group>"; };
 		B0A9603821DA1C8F00F557C3 /* IVString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVString.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +79,8 @@
 		B02185C221D89CCA0096E20C /* LinkList */ = {
 			isa = PBXGroup;
 			children = (
+				B05AA29521DA629300CE5F02 /* IVLinkList.cpp */,
+				B05AA29621DA629300CE5F02 /* IVLinkList.hpp */,
 			);
 			path = LinkList;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				B02185C721D89D5A0096E20C /* IVSort.cpp in Sources */,
 				B03F396D21D7CE5100B069A7 /* AppDelegate.m in Sources */,
 				B0A9603921DA1C8F00F557C3 /* IVString.cpp in Sources */,
+				B05AA29721DA629300CE5F02 /* IVLinkList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
