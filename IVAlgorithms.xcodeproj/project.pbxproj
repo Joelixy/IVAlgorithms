@@ -17,6 +17,7 @@
 		B03F397B21D7CE5200B069A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F397A21D7CE5200B069A7 /* main.m */; };
 		B05AA29A21DA63BF00CE5F02 /* IVLinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B05AA29821DA63BF00CE5F02 /* IVLinkList.cpp */; };
 		B05AA2B021E8C45B00CE5F02 /* IVTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B05AA2AE21E8C45B00CE5F02 /* IVTree.cpp */; };
+		B05AA2B321EB35C300CE5F02 /* IVArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B05AA2B121EB35C300CE5F02 /* IVArray.cpp */; };
 		B0A9603921DA1C8F00F557C3 /* IVString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0A9603721DA1C8F00F557C3 /* IVString.cpp */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		B05AA29921DA63BF00CE5F02 /* IVLinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVLinkList.hpp; sourceTree = "<group>"; };
 		B05AA2AE21E8C45B00CE5F02 /* IVTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVTree.cpp; sourceTree = "<group>"; };
 		B05AA2AF21E8C45B00CE5F02 /* IVTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVTree.hpp; sourceTree = "<group>"; };
+		B05AA2B121EB35C300CE5F02 /* IVArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVArray.cpp; sourceTree = "<group>"; };
+		B05AA2B221EB35C300CE5F02 /* IVArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVArray.hpp; sourceTree = "<group>"; };
 		B0A9603721DA1C8F00F557C3 /* IVString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IVString.cpp; sourceTree = "<group>"; };
 		B0A9603821DA1C8F00F557C3 /* IVString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IVString.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +69,8 @@
 		B02185C021D89CB30096E20C /* Array */ = {
 			isa = PBXGroup;
 			children = (
+				B05AA2B121EB35C300CE5F02 /* IVArray.cpp */,
+				B05AA2B221EB35C300CE5F02 /* IVArray.hpp */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				B02185CA21D8BE900096E20C /* IVMath.cpp in Sources */,
 				B02185C721D89D5A0096E20C /* IVSort.cpp in Sources */,
 				B03F396D21D7CE5100B069A7 /* AppDelegate.m in Sources */,
+				B05AA2B321EB35C300CE5F02 /* IVArray.cpp in Sources */,
 				B0A9603921DA1C8F00F557C3 /* IVString.cpp in Sources */,
 				B05AA29A21DA63BF00CE5F02 /* IVLinkList.cpp in Sources */,
 			);

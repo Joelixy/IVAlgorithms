@@ -8,6 +8,7 @@
 
 #include "IVLinkList.hpp"
 
+#pragma mark 遍历节点
 void IVLinkList::printNodeValue(LinkNode *head) {
     if (head == nullptr) {
         return;
@@ -19,7 +20,7 @@ void IVLinkList::printNodeValue(LinkNode *head) {
     }
 }
 
-#pragma mark delete a node
+#pragma mark delete a node 删除某个节点（判断节点是否存在）
 bool IVLinkList::deleteNode(LinkNode **head, LinkNode *deletedNode) {
     if (*head == nullptr || deletedNode == nullptr) {
         return false;
@@ -55,7 +56,7 @@ bool IVLinkList::deleteNode(LinkNode **head, LinkNode *deletedNode) {
 }
 
 
-#pragma mark delete duplicate node
+#pragma mark delete duplicate node 删除重复节点
 void IVLinkList::deleteDuplicateNode(LinkNode **head) {
     if (*head == nullptr) {
         return;
@@ -90,7 +91,8 @@ void IVLinkList::deleteDuplicateNode(LinkNode **head) {
     }
 }
 
-LinkNode* IVLinkList::numberOfKNodeForTail(LinkNode *head, int k) {
+#pragma mark 倒数第K个节点
+LinkNode* IVLinkList::numberKNodeOfTail(LinkNode *head, int k) {
     if (head == nullptr || k <= 0) {
         return nullptr;
     }
@@ -108,6 +110,7 @@ LinkNode* IVLinkList::numberOfKNodeForTail(LinkNode *head, int k) {
     return slowNode;
 }
 
+#pragma mark 链表中间节点
 LinkNode* IVLinkList::middleNode(LinkNode *head) {
     if (head == nullptr) {
         return nullptr;
@@ -127,7 +130,7 @@ LinkNode* IVLinkList::middleNode(LinkNode *head) {
     return slowNode;
 }
 
-
+#pragma mark 判断链表是否有环
 LinkNode* meetingNodeOfRing(LinkNode *head) {
     if (head) {
         LinkNode *slowNode = head;
@@ -149,6 +152,7 @@ LinkNode* meetingNodeOfRing(LinkNode *head) {
     return nullptr;
 }
 
+#pragma mark 环的入口节点
 LinkNode* IVLinkList::entryNodeOfRing(LinkNode *head) {
     if (head == nullptr) {
         return nullptr;
@@ -175,4 +179,71 @@ LinkNode* IVLinkList::entryNodeOfRing(LinkNode *head) {
         nextNode = nextNode->next;
     }
     return slowNode;
+}
+
+#pragma mark 翻转链表
+LinkNode* IVLinkList::reverseLinkList(LinkNode *head) {
+    if (head == nullptr) {
+        return nullptr;
+    }
+    LinkNode *reverseHead = nullptr;
+    LinkNode *preNode = nullptr;
+    LinkNode *node = head;
+    
+    while (node) {
+        LinkNode *nextNode = node->next;
+        if (nextNode == nullptr) {
+            reverseHead = node;
+        }
+        node->next = preNode;
+        preNode = node;
+        node = nextNode;
+    }
+    return reverseHead;
+}
+
+#pragma mark 合并两个有序链表
+LinkNode* IVLinkList::combineTwoLinkList(LinkNode *headA, LinkNode *headB) {
+    if (headA == nullptr || headB == nullptr) {
+        return headA ? headA : headB;
+    }
+    LinkNode *nodeA = headA;
+    LinkNode *nodeB = headB;
+    LinkNode *combinedHead = nullptr;
+    LinkNode *preNode = nullptr;
+    
+    while (nodeA || nodeB) {
+        LinkNode *tmpNode = nullptr;
+        if (nodeA && nodeB) {
+            if (nodeA->data > nodeB->data) {
+                tmpNode = nodeB;
+                nodeB = nodeB->next;
+            }else if (nodeA->data < nodeB->data) {
+                tmpNode = nodeA;
+                nodeA = nodeA->next;
+            }else {
+                tmpNode = nodeB;
+                nodeA = nodeA->next;
+                nodeB = nodeB->next;
+            }
+        }else if (nodeA) {
+            tmpNode = nodeA;
+        }else {
+            tmpNode = nodeB;
+        }
+        
+        if (preNode == nullptr) {
+            combinedHead = tmpNode;
+        }else {
+            preNode->next = tmpNode;
+            if (nodeA && nodeB == nullptr) {
+                break;
+            }
+            if (nodeA == nullptr && nodeB) {
+                break;
+            }
+        }
+        preNode = tmpNode;
+    }
+    return combinedHead;
 }
