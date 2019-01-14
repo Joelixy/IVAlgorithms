@@ -22,6 +22,19 @@ public:
     // 递增数组 旋转数组中最小的数
     static int minNumOfReverseArray(int *a, int len);
     static int minInOrder(int *a, int left, int right);
+    
+    // 数组中出现超过一半的数字
+    static int overHalfNumInArray(int *a, int len);
+    
+    // 数组中第K大的数（最大的K个数，最小的K个数）利用快速排序
+    static int numberOfMaxNumInArray(int *a, int len, int k);
+    static int firstK(int *a, int start, int end);
+    
+    // 有序数组中某个数出现的次数 二分法->双指针
+    static int countOfSortedArray(int *a, int len, int target);
+    
+    // 调整奇数位 位于偶数位前面
+    static void ajustPosition(int *a, int len);
 };
 
 #endif /* IVArray_hpp */
