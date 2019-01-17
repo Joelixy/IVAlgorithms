@@ -33,6 +33,7 @@ int IVArray::anyDuplicateNumFromUnsortArray(int *a, int len) {
                 swap(a[i], a[a[i]]);
             }else {
                 target = a[i];
+                break;
             }
         }
     }
@@ -214,4 +215,9 @@ void IVArray::ajustPosition(int *a, int len) {
             --right;
         }
     }
+    printf("\n ===>>");
+    for (int i = 0; i < len; i++) {
+        printf("%d, ", a[i]);
+    }
+    printf("\n <<===");
 }

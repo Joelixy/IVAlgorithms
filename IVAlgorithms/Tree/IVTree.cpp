@@ -77,7 +77,6 @@ void IVTree::inOrderNonRecursion(TreeNode *root) {
             nextNode = nextNode->right;
         }
     }
-    
 }
 
 #pragma mark 后序遍历 非递归
@@ -117,7 +116,7 @@ TreeNode* IVTree::constructBTByPreOrderAndInOrder(int *preOrder, int *inOrder, i
     return constructBTByPreOrderAndInOrderImp(preOrder, preOrder+len-1, inOrder, inOrder+len-1);
 }
 
-TreeNode* constructBTByPreOrderAndInOrderImp(int *preOrderStart, int *preOrderEnd, int *inOrderStart, int *inOrderEnd) {
+TreeNode* IVTree::constructBTByPreOrderAndInOrderImp(int *preOrderStart, int *preOrderEnd, int *inOrderStart, int *inOrderEnd) {
     int rootValue = *preOrderStart;
     TreeNode *rootNode = new TreeNode();
     rootNode->data = rootValue;
@@ -156,7 +155,7 @@ TreeNode* IVTree::constructBTByInOrderAndPostOrder(int *inOrder, int *postOrder,
     return constructBTByInOrderAndPostOrderImp(inOrder, inOrder+len-1, postOrder, postOrder+len-1);
 }
 
-TreeNode* constructBTByInOrderAndPostOrderImp(int *inOrderStart, int *inOrderEnd, int *postOrderStart, int *postOrderEnd) {
+TreeNode* IVTree::constructBTByInOrderAndPostOrderImp(int *inOrderStart, int *inOrderEnd, int *postOrderStart, int *postOrderEnd) {
     int rootValue = *postOrderEnd;
     TreeNode *rootNode = new TreeNode();
     rootNode->data = rootValue;

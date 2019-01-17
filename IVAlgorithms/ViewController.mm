@@ -12,8 +12,8 @@
 #import "IVString.hpp"
 
 #import "IVArray.hpp"
-#import "IVTree.hpp"
-#import "IVLinkList.hpp"
+//#import "IVTree.hpp"
+//#import "IVLinkList.hpp"
 
 @interface ViewController ()
 
@@ -69,7 +69,7 @@
 }
 
 - (void)interview_array {
-    int array1[9] = {9, 5, 7, 2, 5, 3, 1, 4, 6};
+    int array1[9] = {8, 5, 7, 2, 5, 3, 1, 4, 6};
     int duplicate = IVArray::anyDuplicateNumFromUnsortArray(array1, 9);
     
     int twoDimension[4][4] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};

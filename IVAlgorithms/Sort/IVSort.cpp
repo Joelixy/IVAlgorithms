@@ -15,7 +15,7 @@
  */
 
 
-void swap(int &a, int &b) {
+void sortSwap(int &a, int &b) {
     int tmp = a;
     a = b;
     b = tmp;
@@ -30,7 +30,7 @@ void IVSort::bubbleSort(int *a, int len) {
     for (int i = 0; i < len-1; i++) {
         for (int j = 0; j < len-1-i; j++) {
             if (a[j] > a[j+1]) {
-                swap(a[j], a[j+1]);
+                sortSwap(a[j], a[j+1]);
             }
         }
     }
@@ -49,7 +49,7 @@ void IVSort::selectSort(int *a, int len) {
     for (int i = 0; i < len - 1; i++) {
         for (int j = i+1; j < len; j++) {
             if (a[i] > a[j]) {
-                swap(a[i], a[j]);
+                sortSwap(a[i], a[j]);
             }
         }
     }
@@ -68,7 +68,7 @@ void IVSort::insertSort(int *a, int len) {
     for (int i = 0; i < len; i++) {
         for (int j = i+1; j > 0; j--) {
             if (a[j] < a[j-1]) {
-                swap(a[j], a[j-1]);
+                sortSwap(a[j], a[j-1]);
             }
         }
     }
@@ -86,13 +86,13 @@ int quickSortImpCore(int *a, int start, int end) {
     for (int i = index; i <= end; i++) {
         if (a[start] > a[i]) {
             if (index != i) {
-                swap(a[index], a[i]);
+                sortSwap(a[index], a[i]);
             }
             ++index;
         }
     }
     --index;
-    swap(a[start], a[index]);
+    sortSwap(a[start], a[index]);
     return index;
 }
 
