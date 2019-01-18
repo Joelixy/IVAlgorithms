@@ -66,7 +66,7 @@ void IVLinkList::deleteDuplicateNode(LinkNode **head) {
     while (node != nullptr) {
         LinkNode *nextNode = node->next;
         bool isNeedDel = false;
-        if (node->data == nextNode->data) {
+        if (nextNode != nullptr && node->data == nextNode->data) {
             isNeedDel = true;
         }
         if (!isNeedDel) {
@@ -98,7 +98,7 @@ LinkNode* IVLinkList::numberKNodeOfTail(LinkNode *head, int k) {
     }
     LinkNode *fastNode = head;
     LinkNode *slowNode = head;
-    for (int i = k-1; i > 0; i++) {
+    for (int i = k-1; i > 0; i--) {
         if (fastNode->next) {
             fastNode = fastNode->next;
         }
@@ -120,7 +120,7 @@ LinkNode* IVLinkList::middleNode(LinkNode *head) {
     if (slowNode->next) {
         fastNode = slowNode->next;
     }
-    while (fastNode->next != nullptr) {
+    while (fastNode && fastNode->next != nullptr) {
         slowNode = slowNode->next;
         fastNode = fastNode->next;
         if (fastNode) {
@@ -228,20 +228,16 @@ LinkNode* IVLinkList::combineTwoLinkList(LinkNode *headA, LinkNode *headB) {
             }
         }else if (nodeA) {
             tmpNode = nodeA;
+            nodeA = nodeA->next;
         }else {
             tmpNode = nodeB;
+            nodeB = nodeB->next;
         }
         
         if (preNode == nullptr) {
             combinedHead = tmpNode;
         }else {
             preNode->next = tmpNode;
-            if (nodeA && nodeB == nullptr) {
-                break;
-            }
-            if (nodeA == nullptr && nodeB) {
-                break;
-            }
         }
         preNode = tmpNode;
     }

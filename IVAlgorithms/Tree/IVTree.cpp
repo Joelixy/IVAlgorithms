@@ -100,7 +100,7 @@ void IVTree::postOrderNonRecursion(TreeNode *root) {
         }else {
             nodes.push_back(nextNode);
             TreeNode *node = nextNode->right;
-            while (node->left) {
+            while (node) {
                 nodes.push_back(node);
                 node = node->left;
             }
